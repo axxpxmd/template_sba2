@@ -2,6 +2,24 @@
     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
         <i class="fa fa-bars"></i>
     </button>
+    <div class="row ">
+        <li type="none" class="mr-1 ml-2 fs-13 font-weight-bold">
+            <i class="fa fa-calendar-alt mr-2"></i>
+            <a id="hari"></a>
+            ,
+            <a id="tanggal"></a>
+            <a id="bulan"></a>
+            <a id="tahun"></a>
+            /
+        </li>
+        <li type="none" class="fs-13 font-weight-bold">
+            <a id="jam"></a>
+            :
+            <a id="menit"></a>
+            :
+            <a id="detik"></a>
+        </li>
+    </div>
     <!-- Nav -->
     <ul class="navbar-nav ml-auto">
         <!-- Nav Item - Alerts -->
@@ -81,3 +99,41 @@
         </li>
     </ul>
 </nav>
+<script>
+    // Hours
+    window.setTimeout("waktu()", 1000);
+
+    function addZero(i) {
+        if (i < 10) {
+            i = "0" + i;
+        }
+        return i;
+    }
+
+    function waktu() {
+        var waktu = new Date();
+        setTimeout("waktu()", 1000);
+        document.getElementById("jam").innerHTML = addZero(waktu.getHours());
+        document.getElementById("menit").innerHTML = addZero(waktu.getMinutes());
+        document.getElementById("detik").innerHTML = addZero(waktu.getSeconds());
+    }
+
+    // Day
+    arrHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jum'at", "Sabtu"]
+    Hari = new Date().getDay();
+    document.getElementById("hari").innerHTML = arrHari[Hari];
+
+    // Date
+    Tanggal = new Date().getDate();
+    document.getElementById("tanggal").innerHTML = Tanggal;
+
+    // Month
+    arrbulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+    Bulan = new Date().getMonth();
+    document.getElementById("bulan").innerHTML = arrbulan[Bulan];
+
+    // Year
+    Tahun = new Date().getFullYear();
+    document.getElementById("tahun").innerHTML = Tahun;
+
+</script>

@@ -18,17 +18,21 @@
 
     <!-- Font -->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
    
 </head>
 <body class="bg-gradient-success">
     <div class="container">
         <div class="row justify-content-center mt-5">
             <div class="col-xl-5 col-lg-6 col-md-3">
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card o-hidden border-0 animate__animated animate__backInDown shadow-lg my-5">
                     <div class="card-body p-0">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Selamat Datang</h1>
+                                <h1 class="h4 text-gray-900" style="font-weight: 500">Selamat Datang</h1>
+                                <span class="fs-14">Masukan username dan password Anda.</span>
                             </div>
                             <hr>
                             <form class="needs-validation" novalidate method="POST" action="{{ route('login') }}" autocomplete="off">

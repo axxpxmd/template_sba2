@@ -1,7 +1,7 @@
 <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Title -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-        <div class="sidebar-brand-text mx-3">EXAMPLE</div>
+        <div class="sidebar-brand-text mx-3 fs-20">{{ config('app.name') }}</div>
     </a>
     
     <hr class="sidebar-divider my-0">
@@ -18,8 +18,8 @@
     </div>
     <li class="nav-item">
         <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span>
+            <i class="fa fa-user"></i>
+            <span>Pengguna</span>
         </a>
     </li>
 

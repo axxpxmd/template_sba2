@@ -9,7 +9,7 @@
 
     <!-- Title --> 
     <link rel="icon" href="" type="image/x-icon">
-    <title>EXAMPLE @yield('title')</title>
+    <title>{{ config('app.name') }} | @yield('title')</title>
 
     <!-- CSS -->
     @yield('style')
@@ -19,7 +19,7 @@
 
     <!-- Font -->
     <link href="{{ asset('assets/vendor/fontawesome-free/css/all.css') }}" rel="stylesheet" type="text/css">
-   
+
 </head>
 <body id="page-top">
     <div id="wrapper">
@@ -31,15 +31,15 @@
         </div>
     </div>
 </body>
+    <script src="{{ asset('assets/vendor/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+    <script src="{{ asset('assets/js/sb-admin-2.min.js') }}"></script>
     <script type="text/javascript">
         var APP_URL = {!! json_encode(url('/').'/') !!}
     </script>
     <script type="text/javascript">
         $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
     </script>
-    <script src="{{ asset('assets/vendor/jquery/jquery.js') }}"></script>
-    <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.js') }}"></script>
-    <script src="{{ asset('assets/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-    <script src="{{ asset('assets/js/sb-admin-2.min.js') }}"></script>
     @yield('script')
 </html>
